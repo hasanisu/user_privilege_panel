@@ -1,0 +1,21 @@
+[
+    {
+        "id": "pri_202301", "title": "add to admin panel"
+    },
+    {
+        "id": "pri_202302", "title": "add to agent panel"
+    },
+    {
+        "id": "pri_202303", "title": "add to disable panel"
+    },
+    {
+        "id": "pri_202304", "title": "add to transaction panel"
+    },
+    {
+        "id": "pri_202305", "title": "add to cancel option"
+    },
+    {
+        "id": "pri_202306", "title": "add to recreate transaction"
+    }
+    
+]

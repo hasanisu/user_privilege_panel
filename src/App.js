@@ -1,23 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header/Header';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Main from './layout/Main';
+import Privileges from './components/Privileges/Privileges';
+import Hasan from './usercompo/Hasan/Hasan';
+import Hamza from './usercompo/Hasan/Hamza/Hamza';
+import Users from './components/Users/Users';
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Main></Main>,
+      children: [
+        {path: '/privileges', element: <Privileges></Privileges>},
+        {path: '/users', element: <Users></Users>},
+        {path: '/hasan',
+         loader: ()=> fetch('fakedb.json'),
+         element: <Hasan></Hasan> },
+        {path: '/hamza', element: <Hamza></Hamza>}
+      ]
+    },
+  ]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
