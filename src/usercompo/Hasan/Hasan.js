@@ -14,14 +14,12 @@ const Hasan = () => {
   const usersData = useLoaderData();
   const [cart, setCart] = useState([]);
   
-
-
     useEffect(()=>{
         const storedCart = getStoredCart();
         console.log('id', storedCart)
         const savedCart= [];
-        for(const id in storedCart){
-            const addedCart = usersData.find(userData => userData.id === id);
+        for(const hello in storedCart){
+            const addedCart = usersData.find(userData => userData.hello.id === hello);
             if(addedCart){
                 savedCart.push(addedCart)
             }

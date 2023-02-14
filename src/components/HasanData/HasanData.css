@@ -2,13 +2,8 @@
     border: 0px solid ;
     border-radius: 10px;
     width: 70%;
-    height: 60px;
+    height: 150px;
     margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content:inherit;
-    justify-content: space-between;
-    padding: 0 10px;
     background-color: rgb(94, 69, 27);
     
 }

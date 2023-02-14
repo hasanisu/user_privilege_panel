@@ -2,6 +2,8 @@ import React from 'react';
 import './HasanCart.css'
 
 const HasanCart = ({cart}) => {
+    
+   
 
     return (
         <div className='position-sticky sticky-lg-top'>
@@ -12,7 +14,9 @@ const HasanCart = ({cart}) => {
                 cart.map(p => <li className='cart-1'
                 key={p.id}
                 >
-                    {p.title}
+                    {p.title1}
+                    {p.title2}
+                    {p.title3}
                 </li>)
             }
             </div>
