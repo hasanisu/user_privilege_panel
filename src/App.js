@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './layout/Main';
 import Privileges from './components/Privileges/Privileges';
 import Hasan from './usercompo/Hasan/Hasan';
-import Hamza from './usercompo/Hasan/Hamza/Hamza';
+import Hamza from './usercompo/Hamza/Hamza';
 import Users from './components/Users/Users';
 
 function App() {
@@ -20,7 +20,9 @@ function App() {
         {path: '/hasan',
          loader: ()=> fetch('fakedb.json'),
          element: <Hasan></Hasan> },
-        {path: '/hamza', element: <Hamza></Hamza>}
+        {path: '/hamza', 
+        loader: ()=> fetch('fakedb_ham.json'),
+        element: <Hamza></Hamza>}
       ]
     },
   ]);

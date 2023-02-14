@@ -18,7 +18,7 @@ const Header = () => {
     return (
         <>
       {[false].map((expand) => (
-        <Navbar key={expand} bg="dark" expand={expand} className="mb-4">
+        <Navbar key={expand} bg="dark" expand={expand} className="">
           <Container fluid>
           
             <Navbar.Toggle className='bg-white' aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -27,7 +27,7 @@ const Header = () => {
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="start"
             >
-              <Offcanvas.Header closeButton className='bg-white'>
+              <Offcanvas.Header closeButton className='bg-sucess'>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                   PRIVILEGE PANEL
                 </Offcanvas.Title>
@@ -39,8 +39,8 @@ const Header = () => {
                   <Link className='text-decoration-none text-white' to="/privileges">PRIVILEGES</Link>
                   
                  <NavDropdown
-                    title = {<Link to='/users'>Users</Link>}
-                    
+                    title = {<Link className='fs-5 text-white text-decoration-none' to='/users'>USERS</Link>}
+            
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
                     
@@ -48,7 +48,7 @@ const Header = () => {
                      
 
                     
-                    <div className='ms-3'>
+                    <div className='ms-3 mt-3 mb-4 p-2 bg-success me-4 ms-4 border rounded'>
                     {
                         users.map(user => <User
                         key={user.id}
@@ -62,14 +62,14 @@ const Header = () => {
 
                     <NavDropdown.Divider />
 
-                    <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
+                    
                     
 
                   </NavDropdown>
                  
                   
 
-                  <Nav.Link to="#action2">ABOUT</Nav.Link>
+                  <Nav.Link to="/about">ABOUT</Nav.Link>
                   
 
 

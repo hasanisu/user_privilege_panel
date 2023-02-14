@@ -1,0 +1,27 @@
+.bodyUser{
+    background-color: rgb(237, 203, 159);
+}
+.userName{
+    color: brown;
+    ;
+}
+.text{
+    width: 75%;
+    background-color: yellow;
+    height: 780px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.user-1{
+    height: 50px;
+}
+
+.userBody1{
+    background-color: rgb(139, 146, 88);
+}
+.pri{
+    color: brown;
+}
+.cartBody{
+    background-color: rgb(190, 176, 69);
+}

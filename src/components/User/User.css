@@ -1,0 +1,15 @@
+.navUser{
+    text-align: center;
+    padding: 5px 7px;
+
+}
+.userNav{
+    width: 100px;
+    border: 0px solid red;
+    border-radius: 15px;
+    background-color: rgb(94, 69, 27);
+    margin-left: 10px;
+}
+.userNav:hover{
+    background-color:rgb(45, 30, 5) ;
+}
